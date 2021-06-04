@@ -24,16 +24,8 @@ public class Main {
 //		System.out.println("map : "+map);
 //		System.out.println("sol : "+sol);
 		
-		boolean tmp =true;
-		for(char x : sol.keySet()) {
-			if(sol.get(x)!=map.get(x)) {
-				tmp=false;
-			}
-		}
-		if(tmp)
+		if(sol.equals(map))
 			answer++;
-		
-		tmp=true;
 		
 		for(int i=0;i<S_len-T_len;i++) {
 			if(map.get(arr[i])==1) {
@@ -46,15 +38,8 @@ public class Main {
 			
 //			System.out.println("map : "+map);
 			
-			for(char x : sol.keySet()) {
-				if(sol.get(x)!=map.get(x)) {
-					tmp=false;
-				}
-			}
-			if(tmp)
+			if(sol.equals(map))
 				answer++;
-			
-			tmp=true;
 		}
 		
 		return answer;
